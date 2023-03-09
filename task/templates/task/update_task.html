@@ -1,0 +1,36 @@
+<style>
+    
+    body{
+        background-color: #695356;
+    }
+
+    input{
+		width: 100%;
+		padding: 12px 20px;
+		margin: 8px 0;
+		box-sizing: border-box;
+	}
+
+    .center-column{
+		width:600px;
+		margin: 20px auto;
+		padding:20px;
+		background-color: #fff;
+		border-radius: 3px;
+		box-shadow: 6px 2px 30px 0px rgba(15, 15, 15, 0.75);
+	}
+
+
+</style>
+
+
+
+<div class="center-column">
+<form method="POST" action="">
+    {% csrf_token %}
+
+    {{form}}
+    <input type="submit" name="Update Task">
+
+</form>
+</div>
