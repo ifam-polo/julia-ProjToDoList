@@ -11,6 +11,7 @@
 		margin: 8px 0;
 		box-sizing: border-box;
 		display: inline-block;
+		
 	}
 
     .center-column{
@@ -21,23 +22,29 @@
 		border-radius: 3px;
 		box-shadow: 6px 2px 30px 0px rgba(15, 15, 15, 0.75);
 		text-align: center;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-wrap: wrap;
 	}
 
 	.btn-info {
 		display: inline-block;
     	height: 50px;
-		width: 200px;
+		width: 110px;
 		background-color: #2acccc;
 		border-color: #2acccc;
 		vertical-align: middle;
+		margin-right: 10px;
 	}
 
 	a {
 		display: inline-block;
 		vertical-align: middle;
-		width: 200px;
+		width: 110px;
 		height: 50px;
     	margin-right: 10px;
+		margin-bottom: 10px;
 		color: #fff;
 		background-color: #db7b65;
 		border-radius: 3px;
@@ -55,7 +62,7 @@
 		
 		<input class="btn btn-info" value="UPDATE" type="submit" name="Update Task">
 	</form>
-	
+
 	<div>
 		<a href="{%url 'lista'%}">CANCELAR</a>
 	</div>

@@ -53,7 +53,7 @@
     {% csrf_token %}
 
     {{form.title}}
-    <input class="btn btn-info" type="submit" name="Create task">
+    <input class="btn btn-info" type="submit" name="Create task" value="Adicionar tarefa">
 </form>
 <div class="todo-list">
     {% for task in tasks %}
