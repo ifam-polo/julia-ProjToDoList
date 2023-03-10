@@ -24,6 +24,7 @@
 		background-color: #fff;
 		border-radius: 3px;
 		box-shadow: 6px 2px 30px 0px rgba(15, 15, 15, 0.75);
+        text-align: center;
 	}
 
     .letra{
@@ -35,7 +36,7 @@
     }
 
     .form{
-        
+
         width: 200px;
         margin: 0 auto;
 	}
@@ -50,17 +51,16 @@
 </style>
 
 <div class="center-column">
+
     <div class="letra">
         <p>Você tem certeza que deseja excluir "{{task}}"? </p>
         <a href="{%url 'lista'%}">Cancelar</a>
-
     </div>
 
-
-<div class="form">
-<form method="POST" action="">
-    {%csrf_token %}
-    <input class="btn btn-danger" value="DELETE"type="submit" name="Confirm">
-</form>
-</div>
+    <div class="form">
+        <form method="POST" action="">
+            {%csrf_token %}
+            <input class="btn btn-danger" value="DELETE"type="submit" name="Confirm">
+        </form>
+    </div>
 </div>
