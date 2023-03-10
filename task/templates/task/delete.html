@@ -1,8 +1,66 @@
-<p>Você tem certeza que deseja excluir "{{task}}"? </p>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
 
-<a href="{%url 'lista'%}">Cancelar</a>
+<style>
+    body {
 
+        background-color: #ecb865;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .center-column{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+		width:600px;
+        height: 210px;
+		margin: 20px auto;
+		padding:20px;
+		background-color: #fff;
+		border-radius: 3px;
+		box-shadow: 6px 2px 30px 0px rgba(15, 15, 15, 0.75);
+	}
+
+    .letra{
+        
+        font-family: 'Oswald', sans-serif;
+        font-size: larger;
+        width: 200px;
+        margin: 0 auto;
+    }
+
+    .form{
+        
+        width: 200px;
+        margin: 0 auto;
+	}
+
+    .btn-danger{
+
+        width: 200px;
+        background-color: #db7b65;
+		border-color: #db7b65;
+    }
+
+</style>
+
+<div class="center-column">
+    <div class="letra">
+        <p>Você tem certeza que deseja excluir "{{task}}"? </p>
+        <a href="{%url 'lista'%}">Cancelar</a>
+
+    </div>
+
+
+<div class="form">
 <form method="POST" action="">
     {%csrf_token %}
-    <input type="submit" name="Confirm">
+    <input class="btn btn-danger" value="DELETE"type="submit" name="Confirm">
 </form>
+</div>
+</div>

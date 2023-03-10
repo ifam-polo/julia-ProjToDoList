@@ -21,6 +21,7 @@ def index(request):
 # função que permite atualizar o andamento da task.
 
 def updateTask(request, pk):
+    
     task = Task.objects.get(id=pk)
 
     form = TaskForm(instance=task)
